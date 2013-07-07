@@ -56,6 +56,10 @@ alias glo='git pull origin master'
 alias gx='gitx --all'
 alias got='git '
 alias get='git '
+## Symfony aliases
+alias appcl='app/console cache:clear'
+alias appc='app/console '
+alias cap='nocorrect cap'
 
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
