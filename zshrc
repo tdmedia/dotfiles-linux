@@ -1,5 +1,5 @@
 # Explicitly configured $PATH variable
-PATH=/usr/local/php5/bin:~/.tmuxifier/bin:/usr/local/git/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
+PATH=/usr/local/php5/bin:/usr/bin/tmuxifier/bin/tmuxifier:/bin:/usr/local/git/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
 export PATH
 
 # Path to your oh-my-zsh configuration.
@@ -79,7 +79,7 @@ fi
 
 # tmux session saver
 #export PATH="~/.tmuxifier/bin:$PATH"
-eval "$(tmuxifier init -)"
+eval "$(/usr/bin/tmuxifier/bin/tmuxifier init -)"
 
 case $TERM in
         xterm*)
