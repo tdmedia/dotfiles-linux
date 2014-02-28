@@ -1,5 +1,6 @@
 # Explicitly configured $PATH variable
-PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
+PATH=/usr/local/php5/bin:~/.tmuxifier/bin:/usr/local/git/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
+export PATH
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -60,6 +61,9 @@ alias get='git '
 alias appcl='app/console cache:clear'
 alias appc='app/console '
 alias cap='nocorrect cap'
+## tmuxifier is really hard to type
+alias tmuxi='nocorrect tmuxifier '
+
 
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
@@ -72,3 +76,13 @@ qfind () {
 if [ -f /usr/bin/vim ]; then
     export EDITOR=/usr/bin/vim
 fi
+
+# tmux session saver
+#export PATH="~/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
+
+case $TERM in
+        xterm*)
+        precmd () {print -Pn "\e]0;%L %n@%m: %~\a"}
+        ;;
+esac
