@@ -1,5 +1,5 @@
 # Explicitly configured $PATH variable
-PATH=/usr/local/php5/bin:/usr/bin/tmuxifier/bin/tmuxifier:/bin:/usr/local/git/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
+PATH=/opt/rh/devtoolset-3/root/usr/bin/:/usr/local/bin:/usr/local/php5/bin:/usr/bin/tmuxifier/bin/tmuxifier:/bin:/usr/local/git/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
 export PATH
 
 # Path to your oh-my-zsh configuration.
@@ -60,10 +60,12 @@ alias get='git '
 ## Symfony aliases
 alias appcl='app/console cache:clear'
 alias appc='app/console '
+alias gulp='nocorrect gulp'
 alias cap='nocorrect cap'
 ## tmuxifier is really hard to type
 alias tmuxi='nocorrect tmuxifier '
 
+alias vi='vim '
 
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
